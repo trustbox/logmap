@@ -1,4 +1,4 @@
-#Log4Splunk
+#Log4Splunk [![Build Status](https://travis-ci.org/fcappi/log4splunk.svg?branch=master)](https://travis-ci.org/fcappi/log4splunk)
 
 Log4Splunk is a tool to help you generate logs in the format Splunk expects.
 
