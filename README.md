@@ -25,7 +25,17 @@ You can log an object as JSON:
 
 ## Installation
 
-TODO
+If you use Maven, include the following lines to your pom.xml:
+
+```
+<dependency>
+    <groupId>com.github.fcappi</groupId>
+    <artifactId>log4splunk</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+If you use other dependency management tools, see [Maven repository - Dependency information](http://search.maven.org/#artifactdetails%7Ccom.github.fcappi%7Clog4splunk%7C1.0.0%7Cjar)
 
 ## License
 
