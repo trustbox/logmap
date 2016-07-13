@@ -35,14 +35,16 @@ public class NullTest {
     Glossary glossary = null;
     LoggableUser user = null;
     String nullValue = null;
+    Throwable nullError = null;
     
-    L.debug("Trying to log with null keys").add("object", nullValue).log();
-    L.debug("Trying to log with null keys").add("object", glossary).log();
-    L.debug("Trying to log with null keys").add("object", user).log();
+    L.debug("Trying to log with null values").add("object", nullValue).log();
+    L.debug("Trying to log with null values").add("object", glossary).log();
+    L.debug("Trying to log with null values").add("object", user).log();
     
-    L.debug("Trying to log with null keys without key").add(nullValue).log();
-    L.debug("Trying to log with null keys without key").add(glossary).log();
-    L.debug("Trying to log with null keys without key").add(user).log();
+    L.debug("Trying to log with null values without key").add(nullValue).log();
+    L.debug("Trying to log with null values without key").add(glossary).log();
+    L.debug("Trying to log with null values without key").add(user).log();
+    L.debug("Trying to log with null values without key").add(nullError).log();
   }
   
   @Test
@@ -51,3 +53,4 @@ public class NullTest {
     L.debug("Trying to log complex object").add("thread", thread).log();
   }
 }
+

@@ -7,6 +7,8 @@ import com.google.gson.GsonBuilder;
  * <b>JSON converter</b>
  * 
  * @author Fernando Cappi (fcappi)
+ * @version %I%, %G%
+ * @since 1.0.0
  */
 public class JsonModelConverter {
   /** JSON Converter **/

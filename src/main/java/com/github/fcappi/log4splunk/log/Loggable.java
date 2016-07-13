@@ -10,7 +10,8 @@ import org.slf4j.event.Level;
  * logs when it is passed as a {@link LogBuilder} method param.
  * 
  * @author Fernando Cappi (fcappi)
- *
+ * @version %I%, %G%
+ * @since 1.0.0
  */
 public interface Loggable {
 

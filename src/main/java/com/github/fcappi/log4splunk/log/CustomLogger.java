@@ -8,7 +8,8 @@ import org.slf4j.LoggerFactory;
  * should use this class instead of Logback {@link Logger} class.
  * 
  * @author Fernando Cappi (fcappi)
- *
+ * @version %I%, %G%
+ * @since 1.0.0
  */
 public class CustomLogger {
   /** Logback LOGGER instance used to log messages **/
