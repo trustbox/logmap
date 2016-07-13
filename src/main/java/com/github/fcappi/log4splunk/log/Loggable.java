@@ -3,14 +3,15 @@ package com.github.fcappi.log4splunk.log;
 import java.util.HashMap;
 import java.util.Map;
 
-import ch.qos.logback.classic.Level;
+import org.slf4j.event.Level;
 
 /**
  * Loggable interface. All objects implementing this class can define which data will be added to
  * logs when it is passed as a {@link LogBuilder} method param.
  * 
  * @author Fernando Cappi (fcappi)
- *
+ * @version %I%, %G%
+ * @since 1.0.0
  */
 public interface Loggable {
 

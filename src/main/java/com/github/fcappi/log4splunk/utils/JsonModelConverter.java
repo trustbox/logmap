@@ -7,6 +7,8 @@ import com.google.gson.GsonBuilder;
  * <b>JSON converter</b>
  * 
  * @author Fernando Cappi (fcappi)
+ * @version %I%, %G%
+ * @since 1.0.0
  */
 public class JsonModelConverter {
   /** JSON Converter **/
@@ -16,7 +18,7 @@ public class JsonModelConverter {
    * Returns a JSON string representing the <b>objectToConvert</b>
    * 
    * @param objectToConvert Object to be converted to JSON string
-   * @return
+   * @return The JSON string
    */
   public static String toJsonString(Object objectToConvert) {
     if (objectToConvert == null) {

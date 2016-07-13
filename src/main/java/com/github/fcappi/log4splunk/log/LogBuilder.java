@@ -3,21 +3,25 @@ package com.github.fcappi.log4splunk.log;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
+import org.slf4j.event.Level;
 
 import com.github.fcappi.log4splunk.utils.JsonModelConverter;
 
-import ch.qos.logback.classic.Level;
 
 /**
  * Log Builder - Build logs using key-value pattern
  * 
  * @author Fernando Cappi (fcappi)
+ * @version %I%, %G%
+ * @since 1.0.0
  */
 public class LogBuilder {
   private String message;
   private Map<String, String> logMap;
   private Map<String, Loggable> loggableMap;
+  private Map<String, Throwable> logAsThrowable;
   private Map<String, Object> logAsJsonMap;
   private Level level;
   private final Logger LOGGER;
@@ -49,6 +53,7 @@ public class LogBuilder {
     this.logMap = new HashMap<String, String>();
     this.loggableMap = new HashMap<String, Loggable>();
     this.logAsJsonMap = new HashMap<String, Object>();
+    this.logAsThrowable = new HashMap<String, Throwable>();
     this.message = message;
     this.level = level;
 
@@ -113,8 +118,8 @@ public class LogBuilder {
   /**
    * Add the key=value to log message
    * 
-   * @param key
-   * @param value
+   * @param key key
+   * @param value value
    * @return Log builder to continue the build process
    */
   public LogBuilder add(String key, String value) {
@@ -188,6 +193,21 @@ public class LogBuilder {
   }
 
   /**
+   * Add the Throwable stacktrace to log message.
+   * 
+   * @param errorToLog {@link Throwable} to log stacktrace
+   * @return Log builder to continue the build process
+   * @since 1.1.0
+   */
+  public LogBuilder add(Throwable errorToLog) {
+    if (errorToLog != null) {
+      logAsThrowable.put("stacktrace", errorToLog);
+    }
+
+    return this;
+  }
+
+  /**
    * Effectively log the message. Do not forget to call this method at the end of a log build
    * process
    */
@@ -225,6 +245,10 @@ public class LogBuilder {
       } catch (Exception e) {
         logMap.put(key, logObject == null ? "" : logObject.toString());
       }
+    });
+    
+    logAsThrowable.forEach((key, throwable) -> {
+      logMap.put(key, throwable == null ? "" : ExceptionUtils.getStackTrace(throwable));
     });
 
     // key value
