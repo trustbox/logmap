@@ -31,7 +31,7 @@ If you use Maven, include the following lines to your pom.xml:
 <dependency>
     <groupId>com.github.fcappi</groupId>
     <artifactId>log4splunk</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
