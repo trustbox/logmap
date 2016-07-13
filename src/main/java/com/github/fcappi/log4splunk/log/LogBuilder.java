@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.slf4j.Logger;
+import org.slf4j.event.Level;
 
 import com.github.fcappi.log4splunk.utils.JsonModelConverter;
 
-import ch.qos.logback.classic.Level;
 
 /**
  * Log Builder - Build logs using key-value pattern
@@ -113,8 +113,8 @@ public class LogBuilder {
   /**
    * Add the key=value to log message
    * 
-   * @param key
-   * @param value
+   * @param key key
+   * @param value value
    * @return Log builder to continue the build process
    */
   public LogBuilder add(String key, String value) {

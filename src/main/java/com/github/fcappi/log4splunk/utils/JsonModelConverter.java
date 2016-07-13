@@ -16,7 +16,7 @@ public class JsonModelConverter {
    * Returns a JSON string representing the <b>objectToConvert</b>
    * 
    * @param objectToConvert Object to be converted to JSON string
-   * @return
+   * @return The JSON string
    */
   public static String toJsonString(Object objectToConvert) {
     if (objectToConvert == null) {
