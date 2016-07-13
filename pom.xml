@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.fcappi</groupId>
 	<artifactId>log4splunk</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<url>https://github.com/fcappi/log4splunk</url>
 	<scm>
 		<url>https://github.com/fcappi/log4splunk</url>
