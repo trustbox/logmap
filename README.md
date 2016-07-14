@@ -6,6 +6,8 @@
 
 It follows the [Logging Best Practices](http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6) defined by Splunk team. 
 
+Since **Log4Splunk** just generate log message in a standard format, you can use it even if you are not using Splunk.
+
 
 ## Code Example 
 
