@@ -1,6 +1,6 @@
 #Log4Splunk [![Build Status](https://travis-ci.org/fcappi/log4splunk.svg?branch=master)](https://travis-ci.org/fcappi/log4splunk)
 
-**Log4Splunk** is a tool to help you generate logs in the format Splunk expects.
+**Log4Splunk** is a tool to help you generate logs in the format [Splunk](http://www.splunk.com/en_us/products/splunk-enterprise.html) expects.
 
 **Log4Splunk IS NOT** a logging framework. It just build messages to be logged by any logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging)
 
