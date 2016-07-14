@@ -22,8 +22,9 @@ __Log an event passing a message and adding useful info__
 L.error("Error! Log it!").add("error_code", 502).log();
 ```
 ```
-21:31:00.598 [main] DEBUG test-logger - msg="Error! Log it!", error_code=502
+21:31:00.598 [main] ERROR test-logger - msg="Error! Log it!", error_code=502
 ```
+
 
 __You can add as many key/values entries as you want__
 
@@ -32,27 +33,29 @@ L.error("Error! Log it!").add("error_code", 502).add("error_message", ex.getMess
 ```
 
 ```
-21:31:00.598 [main] DEBUG test-logger - msg="Error! Log it!", error_code=502, error_message="Unexpected exception"
+21:31:00.598 [main] ERROR test-logger - msg="Error! Log it!", error_code=502, error_message="Unexpected exception"
 ```
+
 
 __You can also log an object as JSON__
 
 ```java
-L.info("Logging the User Object as JSON").add("user", userObject).log(); 
+L.debug("Logging the User Object as JSON").add("user", userObject).log(); 
 ```
 
 ```
 21:31:00.598 [main] DEBUG test-logger - msg="Logging the User Object as JSON", user="{id:123, name:"Joe Doe", age:35}"
 ```
 
-__And an Exception stack trace__
+
+__And an exception stack trace__
 
 ```java
-L.info("Error! See this stack trace").add(myException).log(); 
+L.error("Error! See this stack trace").add(myException).log(); 
 ```
 
 ```
-21:31:00.598 [main] DEBUG test-logger - msg="Error! See this stack trace", stacktrace=java.lang.Exception
+21:31:00.598 [main] ERROR test-logger - msg="Error! See this stack trace", stacktrace=java.lang.Exception
 	at com.github.fcappi.log4splunk.test.NullTest.testNullValues(NullTest.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -81,7 +84,7 @@ L.info("Error! See this stack trace").add(myException).log();
 
 ## Installation
 
-If you use Maven, add Log4Splunk as a dependency including the following lines to your pom.xml:
+If you use Maven, add **Log4Splunk** as a dependency in your project including the following lines to your pom.xml:
 
 ```
 <dependency>
@@ -93,9 +96,9 @@ If you use Maven, add Log4Splunk as a dependency including the following lines t
 
 If you use other dependency management tools, see [Maven repository - Dependency information](http://search.maven.org/#artifactdetails%7Ccom.github.fcappi%7Clog4splunk%7C1.0.0%7Cjar)
 
-It's also required that you have a logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging) as dependency.
+It's also required that you have as your project dependency a logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging).
 
-Done! Now see the [Code Example](#code-example) section to know how easy and useful is to use log4splunk!
+Done! Now see the [Code Example](#code-example) section to know how easy and useful is to use **Log4Splunk**!
 
 ## License
 
