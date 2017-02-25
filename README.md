@@ -1,13 +1,35 @@
-#Log4Splunk [![Build Status](https://travis-ci.org/fcappi/log4splunk.svg?branch=master)](https://travis-ci.org/fcappi/log4splunk)
+#LogMap [![Build Status](https://travis-ci.org/fcappi/log4splunk.svg?branch=master)](https://travis-ci.org/fcappi/log4splunk)
 
-**Log4Splunk** is a tool to help you generate logs in the format [Splunk](http://www.splunk.com/en_us/products/splunk-enterprise.html) expects.
+**LogMap** is an interface to help you easily generate logs in an organized and standard format.
 
-**Log4Splunk IS NOT** a logging framework. It just build messages to be logged by any logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging)
+**LogMap IS NOT** a logging framework. It just build messages to be logged by any logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging)
 
-It follows the [Logging Best Practices](http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6) defined by Splunk team. 
+## Why use LogMap ?
 
-Since **Log4Splunk** just generate log message in a standard format, you can use it even if you are not using Splunk.
+We usually create log messages mixing a static message and some dynamic values:
 
+```java
+ logger.error("one two three: {} {} {}", "a", "b","c")
+```
+```
+21:31:00.598 [main] ERROR test-logger - one two three: a b c
+```
+
+This is a very easy format for humans to read, but this make difficult to filter values from logs when you are using them as source for reports, monitoring dashboards, bug analysis, etc. This is mainly because the log message has no standard format.
+
+With **LogMap**, we generate messages in a standard format(key-value pairs), so you can easily extract information from your logs!
+
+```java
+L.error("Error! Log it!").add("error_code", 502).log();
+```
+```
+21:31:00.598 [main] ERROR test-logger - msg="Error! Log it!", error_code=502
+```
+Other benefits:
+- Easy to read log messages
+- Keep the dynamic data separated from the static message
+- Easy and fast way to write and maintain log lines
+- Easy to programatically extract log information
 
 ## Code Example 
 
@@ -86,7 +108,7 @@ L.error("Error! See this stack trace").add(myException).log();
 
 ## Installation
 
-If you use Maven, add **Log4Splunk** as a dependency in your project including the following lines to your pom.xml:
+If you use Maven, add **LogMap** as a dependency in your project including the following lines to your pom.xml:
 
 ```
 <dependency>
@@ -100,7 +122,7 @@ If you use other dependency management tools, see [Maven repository - Dependency
 
 It's also required that you have as your project dependency a logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging).
 
-Done! Now see the [Code Example](#code-example) section to know how easy and useful is to use **Log4Splunk**!
+Done! Now see the [Code Example](#code-example) section to know how easy and useful is to use **LogMap**!
 
 ## License
 
