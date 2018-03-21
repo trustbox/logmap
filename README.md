@@ -1,4 +1,4 @@
-#LogMap [![Build Status](https://travis-ci.org/fcappi/log4splunk.svg?branch=master)](https://travis-ci.org/fcappi/log4splunk)
+# LogMap [![Build Status](https://travis-ci.org/trustbox/logmap.svg?branch=master)](https://travis-ci.org/trustbox/logmap)
 
 **LogMap** is an interface to help you easily generate logs in an organized and standard format.
 
@@ -112,13 +112,13 @@ If you use Maven, add **LogMap** as a dependency in your project including the f
 
 ```
 <dependency>
-    <groupId>com.github.fcappi</groupId>
-    <artifactId>log4splunk</artifactId>
-    <version>1.1.0</version>
+    <groupId>com.github.trustbox</groupId>
+    <artifactId>logmap</artifactId>
+    <version>1.5.0</version>
 </dependency>
 ```
 
-If you use other dependency management tools, see [Maven repository - Dependency information](http://search.maven.org/#artifactdetails%7Ccom.github.fcappi%7Clog4splunk%7C1.0.0%7Cjar)
+If you use other dependency management tools, see [Maven repository - Dependency information](https://search.maven.org/#artifactdetails%7Ccom.github.trustbox%7Clogmap%7C1.5.0%7Cjar)
 
 It's also required that you have as your project dependency a logging framework that implements [Simple Logging Facade for Java (SLF4J)](http://www.slf4j.org/) (e.g. Log4J, Logback, java.util.logging).
 
