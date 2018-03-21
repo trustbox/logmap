@@ -1,27 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.fcappi</groupId>
-	<artifactId>log4splunk</artifactId>
-	<version>1.1.0</version>
-	<url>https://github.com/fcappi/log4splunk</url>
+	<groupId>com.github.trustbox</groupId>
+	<artifactId>logmap</artifactId>
+	<version>1.5.0</version>
+	<url>https://github.com/trustbox/logmap</url>
 	<scm>
-		<url>https://github.com/fcappi/log4splunk</url>
-		<connection>scm:git@github.com:fcappi/log4splunk.git</connection>
-		<developerConnection>scm:git@github.com:fcappi/log4splunk.git</developerConnection>
+		<url>https://github.com/trustbox/logmap</url>
+		<connection>scm:git@github.com:trustbox/logmap.git</connection>
+		<developerConnection>scm:git@github.com:trustbox/logmap.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<issueManagement>
-		<url>https://github.com/fcappi/log4splunk</url>
+		<url>https://github.com/trustbox/logmap</url>
 	</issueManagement>
-	<description>Log4Splunk is a tool to help you generate logs in the format Splunk expects</description>
-	<name>Log4Splunk</name>
+	<description>LogMap is a tool that provides an easy and organized way to log your java application</description>
+	<name>LogMap</name>
 
 	<developers>
 		<developer>
 			<id>fcappi</id>
 			<name>Fernando Cappi</name>
-			<email>fcappi@fernando.capppi@gmail.com</email>
+			<email>fernando.capppi@gmail.com</email>
 			<url>https://github.com/fcappi</url>
 			<roles>
 				<role>developer</role>
@@ -86,6 +86,20 @@
 				<version>2.5.3</version>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.6.7</version>
@@ -122,27 +136,12 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.5</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
 		</plugins>
 	</build>
 	<licenses>
 		<license>
 			<name>GNU GENERAL PUBLIC LICENSE, Version 3.0</name>
-			<url>https://github.com/fcappi/log4splunk/blob/master/LICENSE</url>
+			<url>https://github.com/trustbox/logmap/blob/master/LICENSE</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
