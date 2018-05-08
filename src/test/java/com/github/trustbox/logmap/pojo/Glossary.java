@@ -1,4 +1,4 @@
-package com.github.fcappi.log4splunk.test.pojo;
+package com.github.trustbox.logmap.pojo;
 
 public class Glossary {
   private String title = "example glossary";
