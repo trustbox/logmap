@@ -1,4 +1,4 @@
-package com.github.fcappi.log4splunk.utils;
+package com.github.trustbox.logmap.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

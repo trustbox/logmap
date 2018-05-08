@@ -1,4 +1,4 @@
-package com.github.fcappi.log4splunk.log;
+package com.github.trustbox.logmap.log;
 
 import java.util.HashMap;
 import java.util.Map;

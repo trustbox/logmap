@@ -1,4 +1,4 @@
-package com.github.fcappi.log4splunk.log;
+package com.github.trustbox.logmap.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

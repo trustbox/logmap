@@ -1,14 +1,12 @@
-package com.github.fcappi.log4splunk.log;
+package com.github.trustbox.logmap.log;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.github.trustbox.logmap.utils.JsonModelConverter;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.event.Level;
-
-import com.github.fcappi.log4splunk.utils.JsonModelConverter;
-
 
 /**
  * Log Builder - Build logs using key-value pattern

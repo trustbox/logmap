@@ -1,12 +1,10 @@
-package com.github.fcappi.log4splunk.test;
+package com.github.trustbox.logmap;
 
-import static org.junit.Assert.*;
-
+import com.github.trustbox.logmap.log.CustomLogger;
+import com.github.trustbox.logmap.pojo.Glossary;
+import com.github.trustbox.logmap.pojo.LoggableUser;
 import org.junit.Test;
 
-import com.github.fcappi.log4splunk.log.CustomLogger;
-import com.github.fcappi.log4splunk.test.pojo.Glossary;
-import com.github.fcappi.log4splunk.test.pojo.LoggableUser;
 /**
  * Test the code behavior when using null objects
  * @author Fernando Cappi (fcappi)

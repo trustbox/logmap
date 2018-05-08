@@ -1,11 +1,10 @@
-package com.github.fcappi.log4splunk.test.pojo;
+package com.github.trustbox.logmap.pojo;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.github.trustbox.logmap.log.Loggable;
 import org.slf4j.event.Level;
-
-import com.github.fcappi.log4splunk.log.Loggable;
 
 public class LoggableUser implements Loggable {
 

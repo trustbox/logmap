@@ -1,4 +1,4 @@
-package com.github.fcappi.log4splunk.test.pojo;
+package com.github.trustbox.logmap.pojo;
 
 public class GlossList {
   private GlossEntry GlossEntry = new GlossEntry();
